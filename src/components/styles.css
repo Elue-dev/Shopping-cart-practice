@@ -1,0 +1,148 @@
+.wrapper{
+    max-width: 1300px;
+    margin: auto;
+    width: 80%;
+}
+
+a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav{
+    background-color: rgb(51, 50, 50);
+    color: #fff;
+}
+
+.nav_items{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.nav .logo{
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.logo span{
+    color: rgb(26, 182, 230);
+}
+
+.cart_icon i{
+    font-size: 1.3rem;
+
+}
+
+.cart_icon span{
+    background-color: red;
+    color: #fff;
+    font-size: .7rem;
+    padding: .04rem .3rem;
+    border-radius: 80%;
+    position: absolute;
+    top: 9px;
+}
+
+img{
+    width: 200px;
+}
+
+.products{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin-top: 3rem;
+}
+
+.product{
+    max-width: 300px;
+    box-shadow: 2px 3px 5px rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart_btn{
+    margin-bottom: 1.5rem;
+    color: #fff;
+    padding: .5rem 1.5rem;
+    border: 0;
+    outline: 0;
+    border-radius: .2rem;
+    font-size: .95rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.add{
+    background-color: rgb(20, 144, 182);
+}
+
+.remove{
+    background-color: red;
+}
+
+.cart{
+    margin-top: 3rem;
+}
+
+.cart_container{
+    box-shadow: 2px 3px 5px rgba(0,0,0,0.5);
+}
+
+.cart_flex{
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 9rem;
+}
+
+.cart_image{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.remove_cart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rem_cart{
+    width: 20%;
+}
+
+.cart_empty{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media (max-width: 800px){
+    .products {
+        grid-template-columns: repeat(2,1fr);
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 600px){
+    .products {
+        grid-template-columns: 1fr;
+        place-items: center;
+    }
+
+    .product{
+        width: 300px;
+    }
+
+    .cart_flex{
+        padding: 2rem 1.5rem;
+    }
+
+    .rem_cart{
+        width: 50%;
+    }
+}
