@@ -4,8 +4,6 @@ import './styles.css'
 import { CartContext } from '../context/CartContext'
 
 export const Home = () => {
-
-    // const {cart, removeFromCart, addToCart} = useContext(CartContext)
     const {state: {cart},
     dispatch,} = useContext(CartContext)
 
@@ -15,7 +13,7 @@ export const Home = () => {
                 <div className='product' key={product.id}>
                     <h3>{product.name}</h3>
                     <img src={product.image} alt={product.name} />
-                    <p><b>Price:</b> {product.price}</p>
+                    <p><b>Price:</b> ${product.price}</p>
                     {cart.some(p => p.id ===product.id) ? (
                         <button onClick={() =>dispatch({
                             type: 'REMOVE_FROM_CART',
